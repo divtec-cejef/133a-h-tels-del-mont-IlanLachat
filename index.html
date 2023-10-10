@@ -18,53 +18,80 @@
     <form id="formRect" action="https://kode.ch/getpost/">
         <ul>
             <li>
-                <label for="hauteur">Hauteur</label>
-                <input autofocus name="hauteur" id="hauteur" type="text" value="100"/>
-            </li>
-            <li>
-                <label for="largeur">Largeur</label>
-                <input name="largeur" id="largeur" type="text" value="100"/>
-            </li>
-            <li>
-                <label for="fond">Couleur de fond</label>
-                <select name="fond" id="fond">
-                    <option value="blue">Bleu</option>
-                    <option selected value="yellow">Jaune</option>
-                    <option value="red">Rouge</option>
-                    <option value="green">Vert</option>
+                <label for="hotel">Hôtel</label>
+                <select name="hotel" id="hotel">
+                    <option selected value="selectionnezHotel">-- Sélectionnez un hotel --</option>
+                    <option value="Hôtel City">Hôtel City</option>
+                    <option value="Hôtel National">Hôtel National</option>
+                    <option value="Hôtel Le Midi">Hôtel Le Midi</option>
+                    <option value="Hôtel Victoria">Hôtel Victoria</option>
                 </select>
             </li>
             <li>
+                <div><label for="nbreChambre">Nombre de Chambres :</label></div>
+                <input name="nbreChambre" id="nbreChambre" type="text"/>
+            </li>
+
+            <li>
                 <fieldset>
-                    <legend>Couleur du texte</legend>
-                    <input type="radio" name="color" id="noir" value="black" checked/>
-                    <label for="noir">Noire</label>
+                    <legend>Type de chambre</legend>
 
-                    <input type="radio" name="color" id="blanc" value="white"/>
-                    <label for="blanc">Blanche</label>
+                    <div>
+                        <input type="radio" name="typeChambre" id="standard_simple" value="Standard simple"/>
+                        <label for="standard_simple">Standard simple</label>
+                    </div>
 
-                    <input type="radio" name="color" id="rose" value="pink"/>
-                    <label for="rose">Rose</label>
+                    <input type="radio" name="typeChambre" id="standard_double" value="Standard double"/>
+                    <label for="standard_double">Standard double</label>
+                    <div>
+                        <input type="radio" name="typeChambre" id="superieur_simple" value="Supérieur simple"/>
+                        <label for="superieur_simple">Supérieur simple </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="typeChambre" id="superieur_double" value="Supérieur double"/>
+                        <label for="superieur_double">Standard double</label>
+                    </div>
+
                 </fieldset>
             </li>
             <li>
                 <fieldset>
-                    <legend>Style du texte</legend>
+                    <legend>Options disponibles</legend>
+                    <div>
+                        <input type="checkbox" name="petit_dejeuner" id="petit_dejeuner"/>
+                        <label for="petit_dejeuner">Petit déjeuner</label>
+                    </div>
 
-                    <input type="checkbox" name="gras" id="gras"/>
-                    <label for="gras">Gras</label>
+                    <div>
+                        <input type="checkbox" name="tv" id="tv"/>
+                        <label for="tv">TV</label>
+                    </div>
 
-                    <input type="checkbox" name="souligne" id="souligne"/>
-                    <label for="souligne">Soulign&eacute;</label>
+                    <div>
+                        <input type="checkbox" name="journaux" id="journaux"/>
+                        <label for="journaux">Journaux</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="ordinateur" id="ordinateur"/>
+                        <label for="ordinateur">Ordinateur</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="acces_wifi" id="acces_wifi"/>
+                        <label for="acces_wifi">Accès wifi</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="animaux_compagnie" id="animaux_compagnie"/>
+                        <label for="animaux_compagnie">Animaux de compagnie</label>
+                    </div>
                 </fieldset>
             </li>
             <li>
-                <label for="txt">Texte</label>
-                <textarea rows="2" cols="20" name="txt" id="txt">Votre texte</textarea>
-            </li>
-            <li>
-                <button class="left" type="reset" name="btReset">R&eacute;initialiser</button>
-                <button class="right" type="submit">Modifier le rectangle</button>
+                <button class="left" type="reset" name="btReset">Reset</button>
+                <button class="right" type="submit">Réserver</button>
             </li>
         </ul>
     </form>
